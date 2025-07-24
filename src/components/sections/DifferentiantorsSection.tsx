@@ -23,16 +23,27 @@ export const DifferentiatorsSection = () => {
                 </motion.div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {features.map((item, index) => (
-                        <motion.div key={index} initial={{ opacity: 0, y: 50, rotateX: -90 }} whileInView={{ opacity: 1, y: 0, rotateX: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} whileHover={{ scale: 1.05, rotateY: 10, boxShadow: "0 25px 50px rgba(1, 223, 178, 0.3)" }} className="group">
-                            <Card className="h-full p-8 bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-500">
-                                <CardContent className="pt-6">
-                                    <motion.div whileHover={{ rotate: 360, scale: 1.2 }} transition={{ duration: 0.6 }} className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6 shadow-xl group-hover:shadow-2xl`}>
-                                        <item.icon className="w-8 h-8 text-white" />
-                                    </motion.div>
-                                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#01dfb2] transition-colors">{item.title}</h3>
-                                    <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors">{item.desc}</p>
-                                </CardContent>
-                            </Card>
+                        // **CORREÇÃO APLICADA AQUI**
+                        <motion.div 
+                            key={index} 
+                            initial={{ opacity: 0, y: 50, rotateX: -90 }} 
+                            whileInView={{ opacity: 1, y: 0, rotateX: 0 }} 
+                            transition={{ duration: 0.8, delay: index * 0.1 }} 
+                            className="group"
+                        >
+                            <motion.div
+                                whileHover={{ scale: 1.05, rotateY: 10, boxShadow: "0 25px 50px rgba(1, 223, 178, 0.3)" }}
+                            >
+                                <Card className="h-full p-8 bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-500">
+                                    <CardContent className="pt-6">
+                                        <motion.div whileHover={{ rotate: 360, scale: 1.2 }} transition={{ duration: 0.6 }} className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6 shadow-xl group-hover:shadow-2xl`}>
+                                            <item.icon className="w-8 h-8 text-white" />
+                                        </motion.div>
+                                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#01dfb2] transition-colors">{item.title}</h3>
+                                        <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors">{item.desc}</p>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </div>

@@ -21,17 +21,28 @@ export const HowItWorksSection = () => {
 
                 <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto mb-20">
                     {ecosystem.map((item, index) => (
-                        <motion.div key={index} initial={{ opacity: 0, y: 100, rotateY: -90 }} whileInView={{ opacity: 1, y: 0, rotateY: 0 }} transition={{ duration: 0.8, delay: item.delay }} whileHover={{ scale: 1.05, rotateY: 5, boxShadow: "0 25px 50px rgba(0,0,0,0.15)" }} className="relative group">
-                            <Card className="h-full p-8 border-0 shadow-2xl bg-white relative overflow-hidden">
-                                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                                <CardContent className="pt-6 text-center relative z-10">
-                                    <motion.div whileHover={{ rotate: 360, scale: 1.2 }} transition={{ duration: 0.6 }} className={`w-24 h-24 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl`}>
-                                        <item.icon className="w-12 h-12 text-white" />
-                                    </motion.div>
-                                    <h3 className="text-3xl font-black text-gray-900 mb-6" style={{ fontFamily: "Anton, sans-serif" }}>{item.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed text-lg">{item.description}</p>
-                                </CardContent>
-                            </Card>
+                        // **CORREÇÃO APLICADA AQUI**
+                        <motion.div 
+                            key={index} 
+                            initial={{ opacity: 0, y: 100, rotateY: -90 }} 
+                            whileInView={{ opacity: 1, y: 0, rotateY: 0 }} 
+                            transition={{ duration: 0.8, delay: item.delay }}
+                            className="relative group"
+                        >
+                            <motion.div
+                                whileHover={{ scale: 1.05, rotateY: 5, boxShadow: "0 25px 50px rgba(0,0,0,0.15)" }}
+                            >
+                                <Card className="h-full p-8 border-0 shadow-2xl bg-white relative overflow-hidden">
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                                    <CardContent className="pt-6 text-center relative z-10">
+                                        <motion.div whileHover={{ rotate: 360, scale: 1.2 }} transition={{ duration: 0.6 }} className={`w-24 h-24 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl`}>
+                                            <item.icon className="w-12 h-12 text-white" />
+                                        </motion.div>
+                                        <h3 className="text-3xl font-black text-gray-900 mb-6" style={{ fontFamily: "Anton, sans-serif" }}>{item.title}</h3>
+                                        <p className="text-gray-600 leading-relaxed text-lg">{item.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </div>

@@ -29,8 +29,8 @@ const TamSamSomInteractiveChart = () => {
         const baseClasses = "absolute left-1/2 transform -translate-x-1/2 text-white font-black text-shadow-lg z-40 pointer-events-none transition-opacity duration-300";
         const opacity = activeView === "todas" ? "opacity-100" : "opacity-0";
         switch (circleName) {
-            case "tam": return `${baseClasses} top-9 text-2xl ${opacity}`;
-            case "sam": return `${baseClasses} top-24 text-xl ${opacity}`;
+            case "tam": return `${baseClasses} top-4 text-2xl ${opacity}`;
+            case "sam": return `${baseClasses} top-20 text-xl ${opacity}`;
             case "som": return `${baseClasses} top-1/2 -translate-y-1/2 text-2xl ${opacity}`;
             default: return baseClasses;
         }
