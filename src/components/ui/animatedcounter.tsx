@@ -1,10 +1,16 @@
-import { useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect, useRef } from "react"
+import { useInView } from "framer-motion"
 
-export const AnimatedCounter = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
+export const AnimatedCounter = ({
+  end,
+  duration = 2000,
+  suffix = "",
+}: { end: number; duration?: number; suffix?: string }) => {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  // A correção está aqui: removi a opção { once: true }
+  // Agora a animação irá disparar toda vez que o elemento entrar na tela.
+  const isInView = useInView(ref)
 
   useEffect(() => {
     if (isInView) {
@@ -21,5 +27,10 @@ export const AnimatedCounter = ({ end, duration = 2000, suffix = "" }: { end: nu
     }
   }, [isInView, end, duration])
 
-  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  )
 }

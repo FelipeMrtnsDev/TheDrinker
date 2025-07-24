@@ -22,9 +22,9 @@ export const HeroSection = ({ scrollToSection }: { scrollToSection: (id: string)
 
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-6 leading-tight" style={{ fontFamily: "Anton, sans-serif" }}>
-            <motion.span initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.5 }}>THE DRINKER:</motion.span><br />
-            <motion.span initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.7 }} className="text-white">A REVOLUÇÃO</motion.span><br />
-            <motion.span initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }}>DA ENTREGA DE BEBIDAS</motion.span>
+            <motion.span className="inline-block mb-2" initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.5 }}>THE DRINKER:</motion.span><br />
+            <motion.span className="inline-block mb-6" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.7 }}>A REVOLUÇÃO DA ENTREGA DE BEBIDAS</motion.span><br />
+            {/* <motion.span initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }}>DA ENTREGA DE BEBIDAS</motion.span> */}
           </h1>
         </motion.div>
 
@@ -35,19 +35,32 @@ export const HeroSection = ({ scrollToSection }: { scrollToSection: (id: string)
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.8 }} className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-          <motion.div whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }} whileTap={{ scale: 0.95 }}>
+          <motion.div
+            className="rounded-full" // <-- ADICIONE AQUI
+            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Button size="lg" className="bg-white text-[#01dfb2] hover:bg-gray-100 font-bold px-10 py-6 text-xl rounded-full border-4 border-white/20" onClick={() => scrollToSection("como-funciona")}>
               <Play className="mr-3 w-6 h-6" />Como Funciona<ArrowRight className="ml-3 w-6 h-6" />
             </Button>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,255,255,0.3)" }} whileTap={{ scale: 0.95 }}>
+
+          <motion.div
+            className="rounded-full" // <-- E AQUI
+            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,255,255,0.3)" }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Button size="lg" className="bg-transparent border-4 border-white text-white hover:bg-white hover:text-[#01dfb2] font-bold px-10 py-6 text-xl rounded-full backdrop-blur-sm" onClick={() => scrollToSection("investir")}>
               <Rocket className="mr-3 w-6 h-6" />Quero Investir<DollarSign className="ml-3 w-6 h-6" />
             </Button>
           </motion.div>
         </motion.div>
 
-        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <motion.div 
+          animate={{ y: [0, 10, 0] }} 
+          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }} 
+          className="absolute left-[49.3%] -translate-x-1/2 z-20"
+        >
           <ArrowDown className="w-8 h-8 text-white/70" />
         </motion.div>
       </div>
