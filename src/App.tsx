@@ -2,7 +2,6 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import TheDrinkerLanding from './components/TheDrinkerLanding';
-// import { UserVision } from "./components/UserVision"
 
 function App() {
   useEffect(() => {

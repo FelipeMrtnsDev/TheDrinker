@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Phone } from "lucide-react";
 
 export const Footer = () => {
     const socialLinks = [
-        { icon: Instagram, href: "#", color: "hover:text-pink-400" },
+        { icon: Instagram, href: "https://www.instagram.com/thedrinkeroficial", color: "hover:text-pink-400" },
         { icon: Linkedin, href: "#", color: "hover:text-blue-400" },
         { icon: Phone, href: "#", color: "hover:text-green-400" },
     ];
@@ -22,8 +22,11 @@ export const Footer = () => {
                             </motion.a>
                         ))}
                     </div>
-                    <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="text-gray-400 text-lg">
+                    <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="text-gray-400 text-lg pb-4">
                         O futuro da bebida é agora. <span className="text-[#01dfb2] font-bold">The Drinker® 2025</span>
+                    </motion.p>
+                    <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="text-gray-400 text-md">
+                        Desenvolvido por<a href="https://portifolio-ten-drab-63.vercel.app" target="_blank" className="text-[#01dfb2]"> @FelipeMrtnsDev</a>
                     </motion.p>
                 </div>
             </div>
