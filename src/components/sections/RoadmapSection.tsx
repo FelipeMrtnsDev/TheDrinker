@@ -6,7 +6,7 @@ export const RoadmapSection = () => {
     const roadmapPhases = [
         { period: "2024 Q4", location: "Campinas", users: "10K", color: "from-green-400 to-green-600" },
         { period: "2025 Q2", location: "Interior SP", users: "50K", color: "from-blue-400 to-blue-600" },
-        { period: "2025 Q4", location: "Sudeste", users: "200K", color: "from-purple-400 to-purple-600" },
+        { period: "2025 Q4", location: "Relançamento do app", users: "200K", color: "from-purple-400 to-purple-600" },
         { period: "2026", location: "Brasil", users: "1M+", color: "from-[#01dfb2] to-[#00c9a7]" },
     ];
     return(

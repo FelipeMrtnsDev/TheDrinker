@@ -26,13 +26,12 @@ export default function TheDrinkerLanding() {
   const testimonials = [
     { name: "João Silva", role: "Dono do Bar do João", text: "Aumentei 300% as vendas em 2 meses!", rating: 5 },
     { name: "Maria Santos", role: "Proprietária Distribuidora", text: "Melhor plataforma de delivery que já usei!", rating: 5 },
-    { name: "Carlos Moto", role: "Motoboy Parceiro", text: "Ganho R$ 200 por dia só com o The Drinker!", rating: 5 },
   ]
 
   const stats = [
-    { number: 50000, suffix: "+", label: "Usuários Ativos" },
-    { number: 1200, suffix: "+", label: "Estabelecimentos" },
-    { number: 500, suffix: "+", label: "Motoboys" },
+    { number: 200, suffix: "+", label: "Usuários Ativos" },
+    { number: 15, suffix: "+", label: "Estabelecimentos" },
+    { number: 30, suffix: "+", label: "Motoboys" },
     { number: 98, suffix: "%", label: "Satisfação" },
   ]
 

@@ -5,8 +5,8 @@ import { Badge } from "../ui/badge";
 export const FounderSection = () => {
     const skills = [
         { icon: Rocket, title: "Visão Estratégica", desc: "Experiência em transformação digital" },
-        { icon: Globe, title: "Mercado Global", desc: "Conhecimento em expansão internacional" },
-        { icon: BarChart3, title: "Growth Hacking", desc: "Especialista em crescimento acelerado" },
+        { icon: Globe, title: "Mercado Nacional", desc: "Conhecimento em expansão nacional" },
+        { icon: BarChart3, title: "Desenvolvedor", desc: "Paixão pelo crescimento da tecnologia" },
         { icon: Heart, title: "Paixão pelo Produto", desc: "Dedicação total ao sucesso da empresa" },
     ];
     return(
